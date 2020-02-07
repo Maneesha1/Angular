@@ -1,0 +1,60 @@
+<p>demo2 works!</p>
+<div>
+    <table>
+        <tr>
+            <td>id</td>
+            <td>
+                <input type="text" [(ngModel)]="item.id">
+            </td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" [(ngModel)]="item.name">
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>
+                <input type="text" [(ngModel)]="item.Email">
+            </td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>
+                <input type="text" [(ngModel)]="item.Age">
+            </td>
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td>
+                <input type="text" [(ngModel)]="item.Salary">
+            </td>
+        </tr>
+        <tr>
+            <td>Designation</td>
+            <td>
+                <select [(ngModel)]='item.Designation'>
+                    <option>progeammer</option>
+                    <option>Tester</option>
+                    <option>Senior</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="Add()">Register</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div>
+    <pre>
+        Id:{{item.id}}
+        Name:{{item.name}}
+        Email:{{item.Email}}
+        Age:{{item.Age}}
+        Salary:{{item.Salary}}
+        Designation:{{item.Designation}}
+    </pre>
+</div>

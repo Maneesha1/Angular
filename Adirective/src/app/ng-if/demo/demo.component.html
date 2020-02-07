@@ -1,0 +1,9 @@
+<p>demo works!</p>
+<p *ngIf='val'>Hii</p>
+<div *ngIf="val;else elseblock">
+    content to render when condition is true
+</div>
+<ng-template #elseblock>
+    content to render when condition is false
+</ng-template>
+<button (click)="set()">{{val?'Hide':'Show'}}</button>

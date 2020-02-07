@@ -1,0 +1,49 @@
+<p>demo1 works!</p>
+<h1>Studentlist</h1>
+<div id="student">
+    <table>
+        <tr>
+            <td>Id</td>
+            <td><input type="text" [(ngModel)]="Id"></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" [(ngModel)]="Name"></td>
+        </tr>
+        <tr *ngIf="val">
+            <td>Std</td>
+            <td><select [(ngModel)]="Std">
+                <option *ngFor="let item of stds">{{item}}</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>-->
+            </select>
+            </td>
+        </tr>
+        <tr *ngIf="val">
+            <td>Age</td>
+            <td><input type="number" [(ngModel)]="Age"></td>
+        </tr>
+        <tr>
+            <td>
+                <button (click)='Add()' class="btn btn-primary">Add</button>
+                <button (click)='setval()' class="btn btn-info">{{val?'show':'hide'}}</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<table class="table table-responsive">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th *ngIf="val">Class</th>
+        <th *ngIf="val">Age</th>
+    </tr>
+    <tr *ngFor="let item of list">
+        <td>{{item.Id}}</td>
+        <td>{{item.Name}}</td>
+        <td *ngIf="val">{{item.Std}}</td>
+        <td *ngIf="val">{{item.Age}}</td>
+        
+    </tr>
+</table> 

@@ -1,0 +1,55 @@
+<p>demo2 works!</p>
+<h1>Project Details</h1>
+<div id="Project">
+    <table>
+        <tr>
+            <td>Pid</td>
+            <td><input type="text" [(ngModel)]="Pid"></td>
+        </tr>
+        <tr>
+            <td>Pname</td>
+            <td><input type="text" [(ngModel)]="Pname"></td>
+        </tr>
+        <tr>
+            <td>Domain</td>
+            <td><select [(ngModel)]="Domain">
+               <option>JAVA</option>
+                <option>.NET</option>
+                <option>SELENIUM</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>START</td>
+            <td><input type="Date" [(ngModel)]="Start"></td>
+        </tr>
+        <tr>
+            <td>End</td>
+            <td><input type="Date" [(ngModel)]="End"></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <button (click)='Add()'>Submit</button>
+                
+            </td>
+        </tr>
+    </table>
+</div>
+<table border="5">
+    <tr>
+        <th>Pid</th>
+        <th>Pname</th>
+        <th>Domain</th>
+        <th>Start</th>
+        <th>End</th>
+    </tr>
+    <tr>
+        <td>{{item.Pid}}</td>
+        <td>{{item.Pname}}</td>
+        <td>{{item.Domain}}</td>
+        <td>{{item.Start}}</td>
+        <td>{{item.End}}</td>
+        
+    </tr>
+</table>

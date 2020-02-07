@@ -1,0 +1,42 @@
+<!--basic @ngfor command to display an array ddefined in component-->
+<h1>Customer details</h1>
+<ul>
+  <li *ngFor="let cmr of Customer">
+    {{cmr.name}} {{cmr.country}} {{cmr.age}}
+  </li>
+</ul>
+<!--basic @ngfor command to display an array defined in component with index-->
+<ul>
+  <li *ngFor="let cmr of Customer;let i=index">
+    {{i+1}}- {{cmr.name}} {{cmr.country}} {{cmr.age}}
+  </li>
+</ul>
+<!--grouping or nested itaration-->
+<ul>
+  <li *ngFor="let group of studentbyCountry">
+    {{group.country}}
+    <ul>
+      <li *ngFor="let stu of group.student">
+        {{stu.name}} {{stu.age}}
+      </li>
+    </ul>
+  </li>
+</ul>
+<!--ngif to check condition to create html struct-->
+<h1>Customer details</h1>
+<ul *ngFor="let cmr of Customer">
+  <li *ngIf="cmr.age<32" class="text-danger">
+    {{cmr.name}} {{cmr.country}}
+  </li>
+</ul>
+
+<!--SwitchCase-->
+<h1>Customer details</h1>
+<ul *ngFor="let cmr of Customer"[ngSwitch]="cmr.country">
+  <li *ngSwitchCase="'India'" class="text-primary">{{cmr.name}} {{cmr.age}}</li>
+  <li *ngSwitchCase="'US'" class="text-danger">{{cmr.name}} {{cmr.age}} </li>
+  <li *ngSwitchDefault class="text-danger">{{cmr.name}} {{cmr.age}}</li>
+    
+
+ 
+</ul>

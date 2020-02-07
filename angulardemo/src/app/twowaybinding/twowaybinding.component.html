@@ -1,0 +1,23 @@
+<p>twowaybinding works!</p>
+<div>
+    <table>
+        <tr>
+            <td>Username</td>
+            <td>
+                <input type="text" [(ngModel)]="obj.Username">
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>
+                <input type="text" [(ngModel)]="obj.Password">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="2">
+                <button (click)="Login()">Login</button>
+            </td>
+        </tr>
+    </table>
+</div>

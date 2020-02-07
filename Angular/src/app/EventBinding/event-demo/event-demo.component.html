@@ -1,0 +1,31 @@
+<p>event-demo works!</p>
+<h1>Hello{{name}}</h1>
+
+<button (click)='setname()'>clickme</button>
+<div>
+    <input type="text" #t1>
+    <button (click)='Greet(t1.value)'>Greet</button>
+</div>
+<div>
+    <select (change)="Greet(s1.value)" #s1>
+        <option value="manu">Manu</option>
+        <option value="manu1">Manu1</option>
+        <option value="manu2">Manu2</option>
+        <option value="manu3">Manu3</option>
+        <option value="manu4">Manu4</option>
+        
+        <option value="manu5">Manu5</option>
+        <option value="manu6">Manu6</option>
+        <option value="manu7">Manu7</option>
+        <option value="manu8">Manu8</option>
+        <option value="manu9">Manu9</option>
+    </select>
+</div>
+<div>
+    <input type="text" #t1>
+    <input type="text" #t2>
+    
+    <button (click)='Add(t1.value,t2.value)'>Add</button>
+    <button (click)='sub(t1.value,t2.value)'>Sub</button>
+    <h3>result{{result}}</h3>
+</div>
